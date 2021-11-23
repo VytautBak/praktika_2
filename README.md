@@ -1,3 +1,6 @@
+Originalus uzduoties failai randami original/, o pataisyti - solution/
+
+
 Įsisavinti Make sistemai pateiktos keturios užduotys. Dvi užduotys yra kataloge bad_makefile ir dar dvi kataloge no_makefile.
 
 Kataloge bad_makefile esančių C kodo Makefile'us reikės pataisyti, kad atitiktų Make sistemos keliamus reikalavimus. Atliktas užduotis įkelti į github'ą ir atsiųsti nuorodas.
