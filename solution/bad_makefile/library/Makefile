@@ -8,7 +8,7 @@ OBJ:=$(SRC:.c=.o)
 
 PREFIX?=/usr
 
-.PHONY: $(LIB) install uninstall clean
+.PHONY: all install uninstall clean
 
 all: $(LIB)
 
@@ -18,9 +18,11 @@ $(LIB): $(OBJ)
 install: $(LIB)
 	install -d $(PREFIX)/include
 	install -m 644 math_functions.h $(PREFIX)/include/math_functions.h
+	install -d $(PREFIX)/lib
+	install -m 644 libcalculator.so $(PREFIX)/lib/$(LIB)
 
 uninstall:
 	rm -f $(PREFIX)/include/math_functions.h
-
+	rm -f $(PREFIX)/lib/$(LIB)
 clean:
 	rm -f $(LIB) $(OBJ)

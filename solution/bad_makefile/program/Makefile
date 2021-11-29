@@ -4,7 +4,7 @@ SRC:=$(wildcard *.c)
 OBJS:=$(SRC:.c=.o)
 BIN:=calculator
 
-.PHONY: $(BIN) clean
+.PHONY: all clean
 
 all: $(BIN)
 

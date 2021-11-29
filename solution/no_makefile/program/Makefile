@@ -4,7 +4,10 @@ SRC:=$(wildcard *.c)
 OBJ:=$(SRC:.c=.o)
 BIN:=calculator
 
-.PHONY:= $(BIN) clean
+PREFIX?=/usr
+
+
+.PHONY:= all clean install uninstall
 
 all: $(BIN)
 
@@ -13,3 +16,11 @@ $(BIN) : $(OBJ)
 
 clean:
 	rm -f $(BIN) $(OBJ)
+
+install: $(BIN)
+	install -d $(PREFIX)/bin
+	install -m 777 calculator $(PREFIX)/bin/$(BIN)
+
+uninstall:
+	rm -f $(PREFIX)/bin/$(BIN)
+ 
